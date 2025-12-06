@@ -1,0 +1,27 @@
+{
+  "name": "socialvault",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "web",
+    "mobile",
+    "shared"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=web",
+    "dev:mobile": "npm run start --workspace=mobile",
+    "build:web": "npm run build --workspace=web",
+    "test": "npm run test --workspaces",
+    "test:web": "npm run test --workspace=web",
+    "test:mobile": "npm run test --workspace=mobile",
+    "test:shared": "npm run test --workspace=shared",
+    "lint": "npm run lint --workspace=web",
+    "install:all": "npm install && npm install --workspace=web && npm install --workspace=mobile && npm install --workspace=shared"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1"
+  }
+}

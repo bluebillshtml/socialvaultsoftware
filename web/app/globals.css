@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-geist: 'Geist', sans-serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-geist);
+  background-color: #05040A;
+  color: #FFFFFF;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light theme */
+body.light {
+  background-color: #FFFFFF;
+  color: #05040A;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Glass-morphism utility classes */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-light {
+    background: rgba(5, 4, 10, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(5, 4, 10, 0.1);
+  }
+
+  .light .glass {
+    background: rgba(5, 4, 10, 0.05);
+    border: 1px solid rgba(5, 4, 10, 0.1);
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-slide-in-bottom {
+    animation: slideInFromBottom 0.5s ease-out;
+  }
+
+  .animate-slide-in-top {
+    animation: slideInFromTop 0.5s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 1000px 100%;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+}
