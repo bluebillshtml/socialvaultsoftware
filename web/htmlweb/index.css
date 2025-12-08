@@ -227,9 +227,29 @@ body {
 }
 
 
+/* Features Section - Adjustable positioning */
+#features {
+  padding-top: 124px !important; /* Adjust this value to move the section up (reduce) or down (increase) - original was 128px (pt-32) */
+}
+
+#features > div {
+  transform: translateY(-4px) !important; /* Move the content up by 4 pixels */
+}
+
 /* Platforms Card - Adjustable positioning */
 .platforms-card {
   margin-top: 200px !important; /* Adjust this value to move the card up or down */
+  width: calc(100% + 8px) !important; /* Make the card 8 pixels wider */
+}
+
+/* Upscaling Section - Adjustable positioning */
+#upscaling {
+  margin-top: -16px !important; /* Adjust this value to move the section up (negative) or down (positive) */
+}
+
+/* Upscaler Card - Adjustable positioning */
+.upscaler-card {
+  margin-top: 50px; /* Adjust this value to move the card up or down */
 }
 
 /* Responsive adjustments */

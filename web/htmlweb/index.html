@@ -358,6 +358,28 @@ animation: gradient-move 4s ease infinite;
                   Multiple Formats
                 </span>
           </div>
+
+          <div class="bg-zinc-950 border border-white/10 rounded-none p-8 flex-1 flex flex-col justify-center gap-3 hover:bg-zinc-900 hover:border-purple-500/50 transition-all duration-300 group relative overflow-hidden [animation:fadeSlideIn_1s_ease-out_0.5s_both] animate-on-scroll">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]">
+            </div>
+            <div class="absolute top-0 right-0 w-3 h-3 border-t border-r border-purple-500/50 group-hover:border-purple-400 transition-colors">
+            </div>
+
+            <div class="relative z-10 flex items-center justify-between">
+              <div class="w-12 h-12 bg-zinc-900 border border-white/10 flex items-center justify-center text-zinc-400 group-hover:text-purple-300 group-hover:border-purple-500/30 transition-all rounded-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="text-xl" style="" data-icon-set="solar" data-solar="maximize-square-bold-duotone">
+                  <path fill="currentColor" d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12" opacity=".5"></path>
+                  <path fill="currentColor" d="M7 8.25a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 7 8.25m0 3.5a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1-.75-.75m0 3.5a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1-.75-.75"></path>
+                </svg>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="text-zinc-600 group-hover:text-white transition-colors" style="" data-icon-set="solar" data-solar="arrow-right-up-linear">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6m0 0H9m9 0v9"></path>
+              </svg>
+            </div>
+            <span class="relative z-10 text-zinc-300 text-sm font-medium font-sans group-hover:text-white mt-2">
+                  AI Upscaling
+                </span>
+          </div>
         </div>
 
         <div class="col-span-2 bg-zinc-950 rounded-none relative overflow-hidden min-h-[300px] flex items-end group border border-white/10 hover:border-cyan-500/30 transition-all duration-500 [animation:fadeSlideIn_1s_ease-out_0.5s_both] animate-on-scroll">
@@ -457,7 +479,7 @@ animation: gradient-move 4s ease infinite;
           </div>
 
           <!-- Tab 3 -->
-          <div class="group [animation:fadeSlideIn_0.8s_ease-out_0.6s_both] animate-on-scroll cursor-pointer relative aura-tab-item" onclick="auraSwitchTab(this)">
+          <div class="group [animation:fadeSlideIn_0.8s_ease-out_0.6s_both] animate-on-scroll pb-10 cursor-pointer relative aura-tab-item" onclick="auraSwitchTab(this)">
             <div class="pointer-events-none aura-tab-content">
               <h3 class="text-lg text-zinc-500 group-hover:text-white transition-colors font-medium font-sans mb-3 duration-300">
                 Fast & Reliable
@@ -465,6 +487,20 @@ animation: gradient-move 4s ease infinite;
               <p class="text-zinc-600 group-hover:text-zinc-400 text-sm leading-relaxed font-medium font-sans max-w-md transition-colors duration-300">
                 Lightning-fast downloads with reliable servers. No waiting,
                 no buffering, just instant access to your content.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tab 4: AI Upscaling -->
+          <div class="group [animation:fadeSlideIn_0.8s_ease-out_0.7s_both] animate-on-scroll cursor-pointer relative aura-tab-item" onclick="auraSwitchTab(this)">
+            <div class="pointer-events-none aura-tab-content">
+              <h3 class="text-lg text-zinc-500 group-hover:text-white transition-colors font-medium font-sans mb-3 duration-300">
+                AI Upscaling & Enhancement
+              </h3>
+              <p class="text-zinc-600 group-hover:text-zinc-400 text-sm leading-relaxed font-medium font-sans max-w-md transition-colors duration-300">
+                Enhance your images and videos with AI-powered upscaling technology. 
+                Improve resolution and quality while maintaining visual fidelity. Perfect for content creators 
+                who need professional-grade enhancements and privacy protection.
               </p>
             </div>
           </div>
@@ -544,6 +580,169 @@ animation: gradient-move 4s ease infinite;
     </div>
   </div>
 </section>
+
+    <!-- AI Upscaling Section -->
+    <section class="bg-black border-white/5 border-t pt-32 pb-32 relative overflow-hidden" id="upscaling">
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-cyan-900/10"></div>
+      
+      <div class="[animation:fadeSlideIn_0.8s_ease-out_0.1s_both] animate-on-scroll max-w-7xl mr-auto ml-auto pr-6 pl-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <!-- Left Column: Content -->
+          <div class="flex flex-col [animation:fadeSlideIn_0.8s_ease-out_0.2s_both] animate-on-scroll">
+            <div class="inline-flex items-center gap-2 px-3 py-1 border border-purple-500/30 bg-purple-950/20 mb-6 w-fit">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full bg-purple-400 opacity-50"></span>
+                <span class="relative inline-flex h-2 w-2 bg-purple-500"></span>
+              </span>
+              <span class="text-xs font-medium text-purple-300 uppercase tracking-widest font-sans">
+                New Service
+              </span>
+            </div>
+
+            <h2 class="text-4xl lg:text-5xl text-white mb-6 leading-[1.1] tracking-tight font-manrope font-medium">
+              AI-Powered<br/>
+              <span class="text-purple-400">Upscaling & Enhancement</span>
+            </h2>
+            
+            <p class="text-lg text-zinc-400 leading-relaxed font-medium font-sans mb-8">
+              Enhance your content quality with advanced AI upscaling technology. 
+              Transform your images and videos to higher resolutions while preserving 
+              visual fidelity and protecting your privacy. Perfect for content creators 
+              who need professional-grade enhancements.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              <div class="flex flex-col gap-3 group">
+                <div class="w-12 h-12 flex items-center justify-center text-purple-300 bg-purple-950/30 border border-purple-500/30 group-hover:border-purple-400 transition-colors rounded-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="text-xl" style="" data-icon-set="solar" data-solar="maximize-square-bold-duotone">
+                    <path fill="currentColor" d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12" opacity=".5"></path>
+                    <path fill="currentColor" d="M7 8.25a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5A.75.75 0 0 1 7 8.25m0 3.5a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1-.75-.75m0 3.5a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1-.75-.75"></path>
+                  </svg>
+                </div>
+                <h3 class="text-base text-white font-semibold font-sans">Image Upscaling</h3>
+                <p class="text-sm text-zinc-400 leading-snug font-medium font-sans">
+                  Enhance image resolution up to 4K with AI-powered processing. 
+                  Perfect for improving quality and protecting your visual content privacy.
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-3 group">
+                <div class="w-12 h-12 flex items-center justify-center text-purple-300 bg-purple-950/30 border border-purple-500/30 group-hover:border-purple-400 transition-colors rounded-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="text-xl" style="" data-icon-set="solar" data-solar="video-library-bold-duotone">
+                    <path fill="currentColor" d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12" opacity=".5"></path>
+                    <path fill="currentColor" d="m14.766 10.074l-4.5-3.095A1.25 1.25 0 0 0 8.25 8.095v6.173a1.25 1.25 0 0 0 2.016 1.116l4.5-3.095a1.25 1.25 0 0 0 0-2.215"></path>
+                  </svg>
+                </div>
+                <h3 class="text-base text-white font-semibold font-sans">Video Enhancement</h3>
+                <p class="text-sm text-zinc-400 leading-snug font-medium font-sans">
+                  Upscale videos to higher resolutions with AI-powered processing. 
+                  Enhance quality while maintaining privacy and professional standards.
+                </p>
+              </div>
+            </div>
+
+            <button class="bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white px-8 py-4 rounded-none text-sm font-semibold transition-all shadow-[0_0_20px_-5px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_-5px_rgba(168,85,247,0.6)] active:translate-y-0.5 font-sans tracking-wide w-fit">
+              Learn More About Upscaling
+            </button>
+          </div>
+
+          <!-- Right Column: Visual Demo -->
+          <div class="relative upscaler-card [animation:fadeSlideIn_0.8s_ease-out_0.4s_both] animate-on-scroll">
+            <div class="bg-zinc-950 border border-purple-500/20 rounded-none p-7 relative overflow-hidden group hover:border-purple-500/40 transition-all duration-500 shadow-2xl shadow-purple-900/20">
+              <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+              <div class="absolute top-0 left-0 w-3 h-3 border-t border-l border-purple-500/50"></div>
+              <div class="absolute top-0 right-0 w-3 h-3 border-t border-r border-purple-500/50"></div>
+              <div class="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-purple-500/50"></div>
+              <div class="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-purple-500/50"></div>
+
+              <div class="relative z-10">
+                <div class="flex items-center justify-between mb-5 pb-3.5 border-b border-white/5">
+                  <div class="flex gap-1.5">
+                    <div class="w-2.5 h-2.5 bg-red-500/80 rounded-full"></div>
+                    <div class="w-2.5 h-2.5 bg-yellow-500/80 rounded-full"></div>
+                    <div class="w-2.5 h-2.5 bg-green-500/80 rounded-full"></div>
+                  </div>
+                  <div class="text-[10px] font-mono text-purple-400 tracking-wider">
+                    AI_UPSCALER.exe
+                  </div>
+                </div>
+
+                <div class="space-y-3.5">
+                  <div class="flex items-center gap-3.5 p-3.5 bg-zinc-900/50 border border-white/5 rounded-none">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-900/30 to-purple-600/30 border border-purple-500/20 flex items-center justify-center rounded-none">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="text-purple-400 text-xl" style="" data-icon-set="solar" data-solar="gallery-wide-bold-duotone">
+                        <path fill="currentColor" d="M18.512 10.077c0 .738-.625 1.337-1.396 1.337s-1.395-.599-1.395-1.337c0-.739.625-1.338 1.395-1.338s1.396.599 1.396 1.338"></path>
+                        <path fill="currentColor" fill-rule="evenodd" d="M18.036 5.532c-1.06-.137-2.414-.137-4.123-.136h-3.826c-1.71 0-3.064 0-4.123.136c-1.09.14-1.974.437-2.67 1.104S2.29 8.149 2.142 9.195C2 10.21 2 11.508 2 13.147v.1c0 1.64 0 2.937.142 3.953c.147 1.046.456 1.892 1.152 2.559s1.58.963 2.67 1.104c1.06.136 2.414.136 4.123.136h3.826c1.71 0 3.064 0 4.123-.136c1.09-.14 1.974-.437 2.67-1.104s1.005-1.514 1.152-2.559C22 16.184 22 14.886 22 13.248v-.1c0-1.64 0-2.937-.142-3.953c-.147-1.046-.456-1.892-1.152-2.559s-1.58-.963-2.67-1.104" clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <div class="flex-1">
+                      <div class="text-sm text-white font-medium font-sans mb-0.5">Image Upscaling</div>
+                      <div class="text-xs text-zinc-500 font-mono">1080p → 4K | Quality Enhanced</div>
+                    </div>
+                    <div class="w-1.5 h-3 bg-purple-500 animate-pulse"></div>
+                  </div>
+
+                  <div class="flex items-center gap-3.5 p-3.5 bg-zinc-900/50 border border-white/5 rounded-none">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-900/30 to-purple-600/30 border border-purple-500/20 flex items-center justify-center rounded-none">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="text-purple-400 text-xl" style="" data-icon-set="solar" data-solar="video-library-bold-duotone">
+                        <path fill="currentColor" d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12" opacity=".5"></path>
+                        <path fill="currentColor" d="m14.766 10.074l-4.5-3.095A1.25 1.25 0 0 0 8.25 8.095v6.173a1.25 1.25 0 0 0 2.016 1.116l4.5-3.095a1.25 1.25 0 0 0 0-2.215"></path>
+                      </svg>
+                    </div>
+                    <div class="flex-1">
+                      <div class="text-sm text-white font-medium font-sans mb-0.5">Video Enhancement</div>
+                      <div class="text-xs text-zinc-500 font-mono">720p → 1080p | Quality Enhanced</div>
+                    </div>
+                    <div class="w-1.5 h-3 bg-purple-500 animate-pulse"></div>
+                  </div>
+
+                  <div class="flex items-center gap-3.5 p-3.5 bg-zinc-900/50 border border-white/5 rounded-none">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-900/30 to-purple-600/30 border border-purple-500/20 flex items-center justify-center rounded-none">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="text-purple-400 text-xl" style="" data-icon-set="solar" data-solar="soundwave-bold-duotone">
+                        <path fill="currentColor" d="M3 10a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zm5-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm5-2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z" opacity=".5"></path>
+                        <path fill="currentColor" d="M3 10a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zm5-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm5-2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"></path>
+                      </svg>
+                    </div>
+                    <div class="flex-1">
+                      <div class="text-sm text-white font-medium font-sans mb-0.5">Audio Enhancement</div>
+                      <div class="text-xs text-zinc-500 font-mono">128kbps → 320kbps | Quality Enhanced</div>
+                    </div>
+                    <div class="w-1.5 h-3 bg-purple-500 animate-pulse"></div>
+                  </div>
+
+                  <div class="flex items-center gap-3.5 p-3.5 bg-zinc-900/50 border border-white/5 rounded-none">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-900/30 to-purple-600/30 border border-purple-500/20 flex items-center justify-center rounded-none">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="text-purple-400 text-xl" style="" data-icon-set="solar" data-solar="folder-bold-duotone">
+                        <path fill="currentColor" d="M2 8c0-2.828 0-4.243.879-5.121C3.757 2 5.172 2 8 2h1.343c.818 0 1.226 0 1.594.152c.368.152.656.44 1.232 1.016L13.5 4.5h4.5c2.828 0 4.243 0 5.121.879C24 6.257 24 7.672 24 10.5v5c0 2.828 0 4.243-.879 5.121C22.243 21.5 20.828 21.5 18 21.5H6c-2.828 0-4.243 0-5.121-.879C0 19.743 0 18.328 0 15.5z" opacity=".5"></path>
+                        <path fill="currentColor" d="M8 2h1.343c.818 0 1.226 0 1.594.152c.368.152.656.44 1.232 1.016L13.5 4.5h4.5c2.828 0 4.243 0 5.121.879C24 6.257 24 7.672 24 10.5v5c0 2.828 0 4.243-.879 5.121C22.243 21.5 20.828 21.5 18 21.5H6c-2.828 0-4.243 0-5.121-.879C0 19.743 0 18.328 0 15.5V8c0-2.828 0-4.243.879-5.121C1.757 2 3.172 2 6 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="flex-1">
+                      <div class="text-sm text-white font-medium font-sans mb-0.5">Batch Processing</div>
+                      <div class="text-xs text-zinc-500 font-mono">Multiple Files | Quality Enhanced</div>
+                    </div>
+                    <div class="w-1.5 h-3 bg-purple-500 animate-pulse"></div>
+                  </div>
+
+                </div>
+
+                <div class="mt-5 pt-3.5 border-t border-white/5 flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-purple-500 animate-pulse"></div>
+                    <span class="text-[10px] text-purple-300 font-mono uppercase tracking-wide">
+                      Processing Complete
+                    </span>
+                  </div>
+                  <span class="text-[10px] text-zinc-600 font-mono">
+                    100% Quality Enhanced
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Testimonial Section -->
     <section class="overflow-hidden pt-32 pb-32 relative" id="testimonial">
