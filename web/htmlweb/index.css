@@ -1,0 +1,240 @@
+/* SocialVault - Main Stylesheet */
+
+/* Base Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #030303;
+}
+
+/* Hide scrollbar for cleaner look */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Visibility utility */
+.invisible {
+  visibility: hidden !important;
+}
+
+/* Custom Gradient Animation for text */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-move 4s ease infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fade Slide In Animation */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+/* Animate on Scroll */
+.animate-on-scroll {
+  animation-play-state: paused !important;
+}
+
+.animate-on-scroll.animate {
+  animation-play-state: running !important;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Beam Animations */
+@keyframes beamV {
+  0% {
+    top: -150px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes beamH {
+  0% {
+    left: -150px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes beamHRev {
+  0% {
+    right: -150px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    right: 100%;
+    opacity: 0;
+  }
+}
+
+.animate-beam-v {
+  animation: beamV 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-beam-h {
+  animation: beamH 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-beam-h-rev {
+  animation: beamHRev 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Aura Bar Grow Animation */
+@keyframes aura-bar-grow {
+  from {
+    transform: scaleY(0.2);
+    opacity: 0.5;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.aura-animate-bar {
+  transform-origin: bottom;
+  animation: aura-bar-grow 2s ease-in-out infinite alternate;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation-play-state: paused;
+}
+
+/* Font Family Classes */
+.font-geist {
+  font-family: 'Geist', sans-serif !important;
+}
+
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.font-manrope {
+  font-family: 'Manrope', sans-serif !important;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif !important;
+}
+
+.font-instrument-serif {
+  font-family: 'Instrument Serif', serif !important;
+}
+
+.font-nunito {
+  font-family: 'Nunito', sans-serif !important;
+}
+
+.font-bricolage {
+  font-family: 'Bricolage Grotesque', sans-serif !important;
+}
+
+.font-space-grotesk {
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.font-geist-mono {
+  font-family: 'Geist Mono', monospace !important;
+}
+
+.font-quicksand {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Selection styling */
+::selection {
+  background-color: rgba(99, 102, 241, 0.3);
+  color: rgb(196, 181, 253);
+}
+
+/* Social Media Icon Styling */
+.social-icon {
+  color: rgb(212, 212, 216);
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon path {
+  fill: currentColor;
+}
+
+
+/* Platforms Card - Adjustable positioning */
+.platforms-card {
+  margin-top: 200px !important; /* Adjust this value to move the card up or down */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .platforms-card {
+    margin-top: 32px !important;
+  }
+}

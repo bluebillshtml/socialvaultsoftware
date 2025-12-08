@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - SocialVault</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; background-color: #030303; }
+.font-manrope { font-family: 'Manrope', sans-serif; }
+::-webkit-scrollbar { width: 0px; background: transparent; }
+@keyframes fadeSlideIn { 
+  0% { opacity: 0; transform: translateY(30px); filter: blur(8px); } 
+  100% { opacity: 1; transform: translateY(0); filter: blur(0px); } 
+}
+@keyframes beamV {
+  0% { top: -150px; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+.animate-beam-v { animation: beamV 6s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+</style>
+<script>
+(function () { 
+  const style = document.createElement("style"); 
+  style.textContent = ` 
+    .animate-on-scroll { animation-play-state: paused !important; } 
+    .animate-on-scroll.animate { animation-play-state: running !important; } 
+  `; 
+  document.head.appendChild(style); 
+  const once = true; 
+  if (!window.__inViewIO) { 
+    window.__inViewIO = new IntersectionObserver((entries) => { 
+      entries.forEach((entry) => { 
+        if (entry.isIntersecting) { 
+          entry.target.classList.add("animate"); 
+          if (once) window.__inViewIO.unobserve(entry.target); 
+        } 
+      }); 
+    }, { threshold: 0.1, rootMargin: "0px 0px -5% 0px" }); 
+  } 
+  window.initInViewAnimations = function (selector = ".animate-on-scroll") { 
+    document.querySelectorAll(selector).forEach((el) => { 
+      window.__inViewIO.observe(el); 
+    }); 
+  }; 
+  document.addEventListener("DOMContentLoaded", () => initInViewAnimations()); 
+})();
+</script>
+</head>
+<body class="text-zinc-300 antialiased selection:selection:text-indigo-200">
+  <div class="aura-background-component top-0 w-full -z-10 absolute brightness-50 saturate-50 h-[900px]" style="mask-image: linear-gradient(to bottom, transparent, black 0%, black 62%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black 62%, transparent)">
+    <div data-us-project="MSvSkmJb9Ax55PeV6eku" class="absolute w-full h-full left-0 top-0 -z-10"></div>
+    <script type="text/javascript">
+      !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+    </script>
+  </div>
+
+  <nav class="fixed flex [animation:fadeSlideIn_0.8s_ease-out_0.1s_both] z-50 pr-4 pl-4 top-6 right-0 left-0 justify-center">
+    <div class="flex shadow-cyan-900/50 bg-[#000000]/60 border-[#ffffff]/20 border rounded-none pt-2 pr-2 pb-2 pl-2 shadow-2xl backdrop-blur-xl gap-x-1 gap-y-1 items-center">
+      <a href="index.html" class="inline-flex items-center justify-center bg-center w-[60px] h-[40px] bg-[url(https://cdn.midjourney.com/992e5ce2-c199-4ff5-b085-9c0f4635fa17/0_2.png?w=800&q=80)] bg-cover rounded"></a>
+
+      <div class="hidden md:flex items-center gap-1 text-sm font-medium text-zinc-400">
+        <a href="index.html#features" class="px-4 py-2 hover:text-cyan-300 transition-colors font-medium font-sans">
+          Features
+        </a>
+        <a href="index.html#pricing" class="px-4 py-2 hover:text-cyan-300 transition-colors font-medium font-sans">
+          Pricing
+        </a>
+        <a href="index.html" class="px-4 py-2 hover:text-cyan-300 transition-colors font-medium font-sans">
+          Showcase
+        </a>
+        <a href="contact.html" class="px-4 py-2 text-cyan-300 transition-colors mr-2 font-medium font-sans">
+          Contact us
+        </a>
+      </div>
+
+      <a href="index.html" class="hover:bg-cyan-400 transition-colors shadow-cyan-500/30 active:scale-95 text-sm font-medium text-zinc-950 bg-cyan-500 rounded-none pt-2.5 pr-5 pb-2.5 pl-5 shadow-lg">
+        Download
+      </a>
+    </div>
+  </nav>
+
+  <section class="flex flex-col overflow-hidden text-white w-full pt-32 pb-20 relative min-h-screen">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none -z-0"></div>
+
+    <div class="md:px-6 flex flex-col w-full max-w-7xl z-10 mr-auto ml-auto pr-4 pl-4 relative">
+      <div class="w-px hidden md:block overflow-hidden bg-gradient-to-b from-transparent via-zinc-800 to-transparent h-full absolute top-0 left-4">
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-transparent via-cyan-500 to-transparent animate-beam-v"></div>
+      </div>
+
+      <div class="absolute top-0 right-4 h-full w-px bg-gradient-to-b from-transparent via-zinc-800 to-transparent hidden md:block overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-transparent via-cyan-500 to-transparent animate-beam-v"></div>
+      </div>
+
+      <div class="text-center max-w-4xl mx-auto mb-16 relative">
+        <div class="inline-flex items-center gap-2 px-3 py-1 border border-cyan-500/30 bg-cyan-950/20 mb-10 [animation:fadeSlideIn_1s_ease-out_0.1s_both] animate-on-scroll">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full bg-cyan-400 opacity-50"></span>
+            <span class="relative inline-flex h-2 w-2 bg-cyan-500"></span>
+          </span>
+          <span class="text-xs font-medium text-cyan-300 uppercase tracking-widest font-sans">
+            Get In Touch
+          </span>
+        </div>
+
+        <h1 class="md:text-7xl lg:text-8xl leading-[1.1] text-5xl font-medium tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-br from-[#ffffff] to-white/10 [animation:fadeSlideIn_1s_ease-out_0.2s_both] animate-on-scroll">
+          Contact Us
+        </h1>
+
+        <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto font-medium leading-relaxed [animation:fadeSlideIn_1s_ease-out_0.3s_both] animate-on-scroll">
+          Have questions about SocialVault? We're here to help. Send us a message and we'll get back to you as soon as possible.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto w-full [animation:fadeSlideIn_1s_ease-out_0.4s_both] animate-on-scroll">
+        <!-- Contact Form -->
+        <div class="bg-zinc-950 border border-white/10 p-8 relative overflow-hidden group hover:border-cyan-500/30 transition-all duration-300">
+          <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+          <div class="absolute top-0 left-0 w-3 h-3 border-t border-l border-cyan-500/50"></div>
+          <div class="absolute top-0 right-0 w-3 h-3 border-t border-r border-cyan-500/50"></div>
+          <div class="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-cyan-500/50"></div>
+          <div class="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-cyan-500/50"></div>
+
+          <div class="relative z-10">
+            <h2 class="text-2xl font-medium text-white mb-6 font-manrope">Send us a message</h2>
+            
+            <form class="space-y-6" id="contactForm">
+              <div>
+                <label for="name" class="block text-sm font-medium text-zinc-400 mb-2">Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required
+                  class="w-full bg-zinc-900/50 border border-white/10 px-4 py-3 text-zinc-200 focus:border-cyan-500/50 focus:outline-none transition-colors"
+                  placeholder="Your name"
+                >
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-zinc-400 mb-2">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required
+                  class="w-full bg-zinc-900/50 border border-white/10 px-4 py-3 text-zinc-200 focus:border-cyan-500/50 focus:outline-none transition-colors"
+                  placeholder="your@email.com"
+                >
+              </div>
+
+              <div>
+                <label for="subject" class="block text-sm font-medium text-zinc-400 mb-2">Subject</label>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  name="subject" 
+                  required
+                  class="w-full bg-zinc-900/50 border border-white/10 px-4 py-3 text-zinc-200 focus:border-cyan-500/50 focus:outline-none transition-colors"
+                  placeholder="How can we help?"
+                >
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-zinc-400 mb-2">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="5" 
+                  required
+                  class="w-full bg-zinc-900/50 border border-white/10 px-4 py-3 text-zinc-200 focus:border-cyan-500/50 focus:outline-none transition-colors resize-none"
+                  placeholder="Tell us more about your inquiry..."
+                ></textarea>
+              </div>
+
+              <button 
+                type="submit"
+                class="w-full bg-cyan-500 text-zinc-950 px-8 py-4 font-semibold hover:bg-cyan-400 transition-all shadow-[0_0_20px_-5px_rgba(34,211,238,0.4)] hover:shadow-[0_0_30px_-5px_rgba(34,211,238,0.6)] active:translate-y-0.5"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="space-y-8">
+          <!-- Contact Cards -->
+          <div class="bg-zinc-950 border border-white/10 p-8 relative overflow-hidden group hover:border-cyan-500/30 transition-all duration-300">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+            <div class="absolute top-0 right-0 w-3 h-3 border-t border-r border-white/20 group-hover:border-cyan-500/50 transition-colors"></div>
+            
+            <div class="relative z-10 flex items-start gap-4">
+              <div class="w-12 h-12 bg-zinc-900 border border-white/10 flex items-center justify-center text-cyan-400 group-hover:border-cyan-500/30 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium text-white mb-2 font-manrope">Email Us</h3>
+                <p class="text-zinc-400 text-sm mb-2">Send us an email anytime</p>
+                <a href="mailto:support@socialvault.com" class="text-cyan-400 hover:text-cyan-300 transition-colors text-sm">
+                  support@socialvault.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-950 border border-white/10 p-8 relative overflow-hidden group hover:border-cyan-500/30 transition-all duration-300">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+            <div class="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-white/20 group-hover:border-cyan-500/50 transition-colors"></div>
+            
+            <div class="relative z-10 flex items-start gap-4">
+              <div class="w-12 h-12 bg-zinc-900 border border-white/10 flex items-center justify-center text-blue-400 group-hover:border-blue-500/30 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium text-white mb-2 font-manrope">Call Us</h3>
+                <p class="text-zinc-400 text-sm mb-2">Mon-Fri from 9am to 6pm</p>
+                <a href="tel:+1234567890" class="text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                  +1 (234) 567-890
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-950 border border-white/10 p-8 relative overflow-hidden group hover:border-cyan-500/30 transition-all duration-300">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+            <div class="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-white/20 group-hover:border-cyan-500/50 transition-colors"></div>
+            
+            <div class="relative z-10 flex items-start gap-4">
+              <div class="w-12 h-12 bg-zinc-900 border border-white/10 flex items-center justify-center text-purple-400 group-hover:border-purple-500/30 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium text-white mb-2 font-manrope">Visit Us</h3>
+                <p class="text-zinc-400 text-sm mb-2">Come say hello at our office</p>
+                <p class="text-purple-400 text-sm">
+                  123 Tech Street<br>
+                  San Francisco, CA 94102
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="bg-zinc-950 border border-white/10 p-8 relative overflow-hidden group hover:border-cyan-500/30 transition-all duration-300">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+            
+            <div class="relative z-10">
+              <h3 class="text-lg font-medium text-white mb-4 font-manrope">Follow Us</h3>
+              <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 bg-zinc-900 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-cyan-400 hover:border-cyan-500/30 transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+                <a href="#" class="w-10 h-10 bg-zinc-900 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-cyan-400 hover:border-cyan-500/30 transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  </svg>
+                </a>
+                <a href="#" class="w-10 h-10 bg-zinc-900 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-cyan-400 hover:border-cyan-500/30 transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+                <a href="#" class="w-10 h-10 bg-zinc-900 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-cyan-400 hover:border-cyan-500/30 transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="max-w-4xl mx-auto w-full mt-24 [animation:fadeSlideIn_1s_ease-out_0.5s_both] animate-on-scroll">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-medium text-white mb-4 font-manrope">Frequently Asked Questions</h2>
+          <p class="text-zinc-400">Quick answers to common questions</p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-zinc-950 border border-white/10 p-6 hover:border-cyan-500/30 transition-all duration-300 group">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-medium text-white mb-2 group-hover:text-cyan-300 transition-colors">How do I download videos?</h3>
+                <p class="text-zinc-400 text-sm">Simply paste the URL of the video you want to download into the input field on our homepage, and click the download button. SocialVault will automatically detect the platform and provide download options.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-950 border border-white/10 p-6 hover:border-cyan-500/30 transition-all duration-300 group">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-medium text-white mb-2 group-hover:text-cyan-300 transition-colors">Which platforms are supported?</h3>
+                <p class="text-zinc-400 text-sm">We support YouTube, TikTok, Instagram, Reddit, X (Twitter), Facebook, LinkedIn, Pinterest, and more. We're constantly adding support for new platforms.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-950 border border-white/10 p-6 hover:border-cyan-500/30 transition-all duration-300 group">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-medium text-white mb-2 group-hover:text-cyan-300 transition-colors">Is SocialVault free to use?</h3>
+                <p class="text-zinc-400 text-sm">Yes! SocialVault offers a free tier with unlimited downloads. We also offer premium plans with additional features like batch downloads, higher quality options, and priority support.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-950 border border-white/10 p-6 hover:border-cyan-500/30 transition-all duration-300 group">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-medium text-white mb-2 group-hover:text-cyan-300 transition-colors">What video quality can I download?</h3>
+                <p class="text-zinc-400 text-sm">You can download videos in various qualities including 4K, 1080p, 720p, and 480p, depending on the source video's available quality. Premium users get access to the highest quality options.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-950 border border-white/10 p-6 hover:border-cyan-500/30 transition-all duration-300 group">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-medium text-white mb-2 group-hover:text-cyan-300 transition-colors">How fast are the downloads?</h3>
+                <p class="text-zinc-400 text-sm">Download speeds depend on your internet connection and the source platform. However, SocialVault uses optimized servers to ensure the fastest possible download speeds.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-950/50 border-t border-white/5 pt-16 pb-8 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-[url(https://cdn.midjourney.com/992e5ce2-c199-4ff5-b085-9c0f4635fa17/0_2.png?w=800&q=80)] bg-cover bg-center"></div>
+            <span class="text-xl font-semibold text-white font-manrope">SocialVault</span>
+          </div>
+          <p class="text-zinc-400 text-sm max-w-md mb-6">
+            Download videos, images, and audio from all your favorite social media platforms. Fast, reliable, and easy to use.
+          </p>
+          <div class="flex gap-3">
+            <a href="#" class="w-9 h-9 bg-zinc-900 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-cyan-400 hover:border-cyan-500/30 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" class="w-9 h-9 bg-zinc-900 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-cyan-400 hover:border-cyan-500/30 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+            <a href="#" class="w-9 h-9 bg-zinc-900 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-cyan-400 hover:border-cyan-500/30 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold mb-4 font-manrope">Product</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="index.html#features" class="text-zinc-400 hover:text-cyan-400 transition-colors">Features</a></li>
+            <li><a href="index.html#pricing" class="text-zinc-400 hover:text-cyan-400 transition-colors">Pricing</a></li>
+            <li><a href="index.html" class="text-zinc-400 hover:text-cyan-400 transition-colors">Download</a></li>
+            <li><a href="#" class="text-zinc-400 hover:text-cyan-400 transition-colors">API</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold mb-4 font-manrope">Company</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="text-zinc-400 hover:text-cyan-400 transition-colors">About</a></li>
+            <li><a href="contact.html" class="text-zinc-400 hover:text-cyan-400 transition-colors">Contact</a></li>
+            <li><a href="#" class="text-zinc-400 hover:text-cyan-400 transition-colors">Privacy</a></li>
+            <li><a href="#" class="text-zinc-400 hover:text-cyan-400 transition-colors">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-zinc-500 text-sm">
+          © 2024 SocialVault. All rights reserved.
+        </p>
+        <div class="flex gap-6 text-sm">
+          <a href="#" class="text-zinc-500 hover:text-cyan-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="text-zinc-500 hover:text-cyan-400 transition-colors">Terms of Service</a>
+          <a href="#" class="text-zinc-500 hover:text-cyan-400 transition-colors">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Form submission handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+      };
+      
+      // Here you would typically send the data to your backend
+      console.log('Form submitted:', formData);
+      
+      // Show success message
+      alert('Thank you for your message! We\'ll get back to you soon.');
+      
+      // Reset form
+      this.reset();
+    });
+  </script>
+</body>
+</html>
